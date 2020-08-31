@@ -44,7 +44,29 @@
     <field name="project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="project_responsible_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
-    <field name="project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+    <field name="project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
+           omitNorms="true"/>
+
+    <field name="backup_project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="backup_project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="backup_project_responsible_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
+    <field name="backup_project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
+           omitNorms="true"/>
+
+    <field name="hierarchy" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="hierarchy_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="hierarchy_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
+    <field name="hierarchy_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <field name="ehs_advisor" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="ehs_advisor_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="ehs_advisor_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
+    <field name="ehs_advisor_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <field name="measure_check" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="measure_check_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="measure_check_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
+    <field name="measure_check_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
     <field name="types_id" type="int" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
     <field name="types" type="string" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
@@ -90,7 +112,9 @@
     <field name="is_closed_text" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="is_active" type="boolean" indexed="true" stored="true" omitNorms="true"/>
     <field name="is_active_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+
     <field name="status" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="status_id" type="int" indexed="true" stored="true" omitNorms="true"/>
 
     <uniqueKey>id</uniqueKey>
 
