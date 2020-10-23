@@ -116,6 +116,21 @@
     <field name="status" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="status_id" type="int" indexed="true" stored="true" omitNorms="true"/>
 
+    <field name="has_contractor_registration" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="has_contractor_registration_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+
+    <field name="has_work_order" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="has_work_order_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+
+    <field name="work_order_order_number" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_comments" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_dispatcher" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_service_team_code" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_service_team_name" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_service_team_contact_code" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_service_team_contact_first_name" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="work_order_service_team_contact_last_name" type="string" indexed="true" stored="true" omitNorms="true"/>
+
     <uniqueKey>id</uniqueKey>
 
     <field name="text" type="string_ci" indexed="true" stored="false"/>
