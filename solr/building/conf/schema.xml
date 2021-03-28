@@ -42,6 +42,11 @@
     <field name="site_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <field name="group_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="group" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="group_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
+    <field name="group_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
     <field name="date_created" type="date" indexed="true" stored="true" omitNorms="true"/>
     <field name="last_update" type="date" indexed="true" stored="true" omitNorms="true"/>
 
