@@ -24,49 +24,79 @@
     <field name="description_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="description_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="description" dest="description_sort"/>
+    <copyField source="description" dest="description_search"/>
+
     <field name="number" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="number_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="number_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="number" dest="number_sort"/>
+    <copyField source="number" dest="number_search"/>
 
     <field name="location" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="location" dest="location_sort"/>
+    <copyField source="location" dest="location_search"/>
+
     <field name="location_sub" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_sub_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_sub_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <field name="user" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="location_sub" dest="location_sub_sort"/>
+    <copyField source="location_sub" dest="location_sub_search"/>
+
     <field name="user_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="user" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="user_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="user_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <field name="project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="user" dest="user_sort"/>
+    <copyField source="user" dest="user_search"/>
+
     <field name="project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="project_responsible_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
            omitNorms="true"/>
 
-    <field name="backup_project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="project_responsible" dest="project_responsible_sort"/>
+    <copyField source="project_responsible" dest="project_responsible_search"/>
+
     <field name="backup_project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="backup_project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="backup_project_responsible_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="backup_project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
            omitNorms="true"/>
 
-    <field name="hierarchy" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="backup_project_responsible" dest="backup_project_responsible_sort"/>
+    <copyField source="backup_project_responsible" dest="backup_project_responsible_search"/>
+
     <field name="hierarchy_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="hierarchy" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="hierarchy_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="hierarchy_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <field name="ehs_advisor" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="hierarchy" dest="hierarchy_sort"/>
+    <copyField source="hierarchy" dest="hierarchy_search"/>
+
     <field name="ehs_advisor_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="ehs_advisor" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="ehs_advisor_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="ehs_advisor_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <field name="measure_check" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <copyField source="ehs_advisor" dest="ehs_advisor_sort"/>
+    <copyField source="ehs_advisor" dest="ehs_advisor_search"/>
+
     <field name="measure_check_id" type="int" indexed="true" stored="true" omitNorms="true"/>
+    <field name="measure_check" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="measure_check_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="measure_check_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="measure_check" dest="measure_check_sort"/>
+    <copyField source="measure_check" dest="measure_check_search"/>
 
     <field name="types_id" type="int" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
     <field name="types" type="string" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
@@ -76,29 +106,47 @@
     <field name="building_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="building_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="building" dest="building_sort"/>
+    <copyField source="building" dest="building_search"/>
+
     <field name="site_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="site" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="site" dest="site_sort"/>
+    <copyField source="site" dest="site_search"/>
 
     <field name="floor_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="floor" dest="floor_sort"/>
+    <copyField source="floor" dest="floor_search"/>
+
     <field name="space_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="space" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="space" dest="space_sort"/>
+    <copyField source="space" dest="space_search"/>
+
     <field name="space_code" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_code_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_code_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="space_code" dest="space_code_sort"/>
+    <copyField source="space_code" dest="space_code_search"/>
 
     <field name="asset_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="asset" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="asset_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="asset_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="asset" dest="asset_sort"/>
+    <copyField source="asset" dest="asset_search"/>
 
     <field name="date_created" type="date" indexed="true" stored="true" omitNorms="true"/>
     <field name="last_update" type="date" indexed="true" stored="true" omitNorms="true"/>

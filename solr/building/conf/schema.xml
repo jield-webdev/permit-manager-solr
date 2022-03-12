@@ -24,28 +24,46 @@
     <field name="name_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="name_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="name" dest="name_sort"/>
+    <copyField source="name" dest="name_search"/>
+
     <field name="code" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="code_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="code_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="code" dest="code_sort"/>
+    <copyField source="code" dest="code_search"/>
+
     <field name="type" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="type_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="type_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="type" dest="type_sort"/>
+    <copyField source="type" dest="type_search"/>
 
     <field name="status_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="status" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="status_sort" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="status_search" type="string" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="status" dest="status_sort"/>
+    <copyField source="status" dest="status_search"/>
+
     <field name="site_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="site" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="site" dest="site_sort"/>
+    <copyField source="site" dest="site_search"/>
+
     <field name="group_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="group" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="group_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="group_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="group" dest="group_sort"/>
+    <copyField source="group" dest="group_search"/>
 
     <field name="date_created" type="date" indexed="true" stored="true" omitNorms="true"/>
     <field name="last_update" type="date" indexed="true" stored="true" omitNorms="true"/>

@@ -24,33 +24,54 @@
     <field name="code_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="code_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="code" dest="code_sort"/>
+    <copyField source="code" dest="code_search"/>
+
     <field name="description" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="description_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="description_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="description" dest="description_sort"/>
+    <copyField source="description" dest="description_search"/>
 
     <field name="building_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="building" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="building_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="building_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="building" dest="building_sort"/>
+    <copyField source="building" dest="building_search"/>
+
     <field name="site_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="site" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="site_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="site" dest="site_sort"/>
+    <copyField source="site" dest="site_search"/>
 
     <field name="floor_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="floor_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="floor" dest="floor_sort"/>
+    <copyField source="floor" dest="floor_search"/>
+
     <field name="space_id" type="int" indexed="true" stored="true" omitNorms="true"/>
     <field name="space" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
+    <copyField source="space" dest="space_sort"/>
+    <copyField source="space" dest="space_search"/>
+
     <field name="space_code" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_code_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="space_code_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="space_code" dest="space_code_sort"/>
+    <copyField source="space_code" dest="space_code_search"/>
 
     <field name="date_created" type="date" indexed="true" stored="true" omitNorms="true"/>
     <field name="last_update" type="date" indexed="true" stored="true" omitNorms="true"/>
