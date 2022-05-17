@@ -53,7 +53,6 @@
     <field name="user_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="user_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <copyField source="user" dest="user_sort"/>
     <copyField source="user" dest="user_search"/>
 
     <field name="project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
@@ -62,7 +61,6 @@
     <field name="project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
            omitNorms="true"/>
 
-    <copyField source="project_responsible" dest="project_responsible_sort"/>
     <copyField source="project_responsible" dest="project_responsible_search"/>
 
     <field name="backup_project_responsible_id" type="int" indexed="true" stored="true" omitNorms="true"/>
@@ -71,7 +69,6 @@
     <field name="backup_project_responsible_search" type="text_general_edge_ngram" indexed="true" stored="true"
            omitNorms="true"/>
 
-    <copyField source="backup_project_responsible" dest="backup_project_responsible_sort"/>
     <copyField source="backup_project_responsible" dest="backup_project_responsible_search"/>
 
     <field name="hierarchy_id" type="int" indexed="true" stored="true" omitNorms="true"/>
@@ -79,7 +76,6 @@
     <field name="hierarchy_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="hierarchy_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <copyField source="hierarchy" dest="hierarchy_sort"/>
     <copyField source="hierarchy" dest="hierarchy_search"/>
 
     <field name="ehs_advisor_id" type="int" indexed="true" stored="true" omitNorms="true"/>
@@ -87,7 +83,6 @@
     <field name="ehs_advisor_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="ehs_advisor_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <copyField source="ehs_advisor" dest="ehs_advisor_sort"/>
     <copyField source="ehs_advisor" dest="ehs_advisor_search"/>
 
     <field name="measure_check_id" type="int" indexed="true" stored="true" omitNorms="true"/>
@@ -95,7 +90,6 @@
     <field name="measure_check_sort" type="string_ci" indexed="true" stored="true" omitNorms="true"/>
     <field name="measure_check_search" type="text_general_edge_ngram" indexed="true" stored="true" omitNorms="true"/>
 
-    <copyField source="measure_check" dest="measure_check_sort"/>
     <copyField source="measure_check" dest="measure_check_search"/>
 
     <field name="types_id" type="int" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
