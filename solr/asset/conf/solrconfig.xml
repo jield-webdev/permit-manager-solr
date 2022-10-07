@@ -72,8 +72,6 @@
        The examples below can be used to load some solr-contribs along 
        with their external dependencies.
     -->
-  <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-dataimporthandler-.*\.jar" />
-
   <lib dir="${solr.install.dir:../../../..}/contrib/extraction/lib" regex=".*\.jar" />
   <lib dir="${solr.install.dir:../../../..}/dist/" regex="solr-cell-\d.*\.jar" />
 
@@ -796,12 +794,6 @@
        not be initialized until the first request that uses it.
 
     -->
-
-  <requestHandler name="/dataimport" class="solr.DataImportHandler">
-    <lst name="defaults">
-      <str name="config">solr-data-config.xml</str>
-    </lst>
-  </requestHandler>
 
   <!-- SearchHandler
 
@@ -1733,10 +1725,6 @@
        in Solr's conf/xslt directory.  Changes to xslt files are checked for
        every xsltCacheLifetimeSeconds.  
     -->
-  <queryResponseWriter name="xslt" class="solr.XSLTResponseWriter">
-    <int name="xsltCacheLifetimeSeconds">5</int>
-  </queryResponseWriter>
-
   <!-- Query Parsers
 
        http://wiki.apache.org/solr/SolrQuerySyntax
