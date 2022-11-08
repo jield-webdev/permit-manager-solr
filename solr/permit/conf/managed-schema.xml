@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<schema name="calendar_calendar" version="1.5">
+<schema name="permit" version="1.5">
 
     <!-- If you remove this field, you must _also_ disable the update log in solrconfig.xml
       or Solr won't start. _version_ and update log are required for SolrCloud
@@ -29,7 +29,7 @@
 
     <field name="number" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="number_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
-    <field name="number_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
+    <field name="number_search" type="text_en_splitting" indexed="true" stored="true" omitNorms="true"/>
 
     <copyField source="number" dest="number_sort"/>
     <copyField source="number" dest="number_search"/>
