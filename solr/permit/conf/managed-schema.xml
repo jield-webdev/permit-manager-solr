@@ -34,6 +34,13 @@
     <copyField source="number" dest="number_sort"/>
     <copyField source="number" dest="number_search"/>
 
+    <field name="legacy_number" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="legacy_number_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
+    <field name="legacy_number_search" type="text_en_splitting" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="legacy_number" dest="legacy_number_sort"/>
+    <copyField source="legacy_number" dest="legacy_number_search"/>
+
     <field name="location" type="string" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
     <field name="location_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
@@ -54,6 +61,14 @@
     <field name="user_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
 
     <copyField source="user" dest="user_search"/>
+
+    <field name="severity_level_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
+    <field name="severity_level" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="severity_level_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
+    <field name="severity_level_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
+
+    <copyField source="severity_level" dest="severity_level_sort"/>
+    <copyField source="severity_level" dest="severity_level_search"/>
 
     <field name="project_responsible_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
     <field name="project_responsible" type="string" indexed="true" stored="true" omitNorms="true"/>
@@ -91,6 +106,8 @@
     <field name="measure_check_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
 
     <copyField source="measure_check" dest="measure_check_search"/>
+
+    <field name="responsible_users_id" type="pint" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
 
     <field name="types_id" type="pint" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
     <field name="types" type="string" indexed="true" stored="true" omitNorms="true" multiValued="true"/>
@@ -162,22 +179,8 @@
     <field name="has_contractor_registration" type="boolean" indexed="true" stored="true" omitNorms="true"/>
     <field name="has_contractor_registration_text" type="string" indexed="true" stored="true" omitNorms="true"/>
 
-    <field name="is_new_construction_site" type="boolean" indexed="true" stored="true" omitNorms="true"/>
-    <field name="is_new_construction_site_text" type="string" indexed="true" stored="true" omitNorms="true"/>
-
-    <field name="has_work_order" type="boolean" indexed="true" stored="true" omitNorms="true"/>
-    <field name="has_work_order_text" type="string" indexed="true" stored="true" omitNorms="true"/>
-
-    <field name="work_order_order_number" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_comments" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_dispatcher" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_service_team_code" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_service_team_name" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_service_team_contact_code" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="work_order_service_team_contact_first_name" type="string" indexed="true" stored="true"
-           omitNorms="true"/>
-    <field name="work_order_service_team_contact_last_name" type="string" indexed="true" stored="true"
-           omitNorms="true"/>
+    <field name="is_new_permit_system" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="is_new_permit_system_text" type="string" indexed="true" stored="true" omitNorms="true"/>
 
     <uniqueKey>id</uniqueKey>
 
