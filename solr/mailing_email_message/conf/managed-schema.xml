@@ -109,7 +109,7 @@
     <copyField source="mailing_mailing" dest="mailing_mailing_search"/>
     <copyField source="mailing_mail_subject" dest="mailing_mail_subject_sort"/>
     <copyField source="mailing_mail_subject" dest="mailing_mail_subject_search"/>
-    
+
 
     <field name="has_mailing" type="boolean" indexed="true" stored="true" omitNorms="true"/>
     <field name="has_mailing_text" type="string" indexed="true" stored="true" omitNorms="true"/>
@@ -126,8 +126,10 @@
     <field name="distribution_list_name_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
     <field name="distribution_list_name_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
     <field name="distribution_list_mail_subject" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="distribution_list_mail_subject_sort" type="text_gen_sort" indexed="true" stored="true" omitNorms="true"/>
-    <field name="distribution_list_mail_subject_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
+    <field name="distribution_list_mail_subject_sort" type="text_gen_sort" indexed="true" stored="true"
+           omitNorms="true"/>
+    <field name="distribution_list_mail_subject_search" type="text_general" indexed="true" stored="true"
+           omitNorms="true"/>
 
     <copyField source="distribution_list_name" dest="distribution_list_name_sort"/>
     <copyField source="distribution_list_name" dest="distribution_list_name_search"/>
@@ -143,6 +145,18 @@
     <field name="distribution_list_user_search" type="text_general" indexed="true" stored="true" omitNorms="true"/>
 
     <copyField source="distribution_list_user" dest="distribution_list_user_search"/>
+
+    <field name="has_permit" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="has_permit_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_number" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_description" type="string" indexed="true" stored="true" omitNorms="true"/>
+
+    <field name="has_permit_template" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="has_permit_template_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_template_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_template_number" type="string" indexed="true" stored="true" omitNorms="true"/>
+    <field name="permit_template_description" type="string" indexed="true" stored="true" omitNorms="true"/>
 
     <uniqueKey>id</uniqueKey>
 
