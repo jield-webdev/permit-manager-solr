@@ -41,7 +41,7 @@
     <copyField source="type" dest="type_sort"/>
     <copyField source="type" dest="type_search"/>
 
-    <field name="is_active" type="pint" indexed="true" stored="true" omitNorms="true"/>
+    <field name="is_active" type="boolean" indexed="true" stored="true" omitNorms="true"/>
     <field name="is_active_text" type="string" indexed="true" stored="true" omitNorms="true"/>
 
     <field name="building_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
