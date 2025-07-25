@@ -66,8 +66,6 @@
     <field name="has_assets_text" type="string" indexed="true" stored="true"/>
     <field name="has_permits" type="boolean" indexed="true" stored="true"/>
     <field name="has_permits_text" type="string" indexed="true" stored="true"/>
-    <field name="is_active" type="boolean" indexed="true" stored="true"/>
-    <field name="is_active_text" type="string" indexed="true" stored="true"/>
 
     <uniqueKey>id</uniqueKey>
 
