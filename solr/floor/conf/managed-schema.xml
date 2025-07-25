@@ -34,13 +34,8 @@
     <copyField source="code" dest="code_sort"/>
     <copyField source="code" dest="code_search"/>
 
-    <field name="status_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
-    <field name="status" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="status_sort" type="string" indexed="true" stored="true" omitNorms="true"/>
-    <field name="status_search" type="string" indexed="true" stored="true" omitNorms="true"/>
-
-    <copyField source="status" dest="status_sort"/>
-    <copyField source="status" dest="status_search"/>
+    <field name="is_active" type="pint" indexed="true" stored="true" omitNorms="true"/>
+    <field name="is_active_text" type="string" indexed="true" stored="true" omitNorms="true"/>
 
     <field name="building_id" type="pint" indexed="true" stored="true" omitNorms="true"/>
     <field name="building" type="string" indexed="true" stored="true" omitNorms="true"/>
