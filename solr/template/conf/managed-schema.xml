@@ -73,6 +73,31 @@
     <copyField source="description" dest="description_search" />
 
     <field
+            name="title"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="title_sort"
+            type="text_gen_sort"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="title_search"
+            type="text_general"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+
+    <copyField source="title" dest="title_sort" />
+    <copyField source="title" dest="title_search" />
+
+    <field
         name="number"
         type="string"
         indexed="true"
