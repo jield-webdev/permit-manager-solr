@@ -53,6 +53,9 @@
     <copyField source="site" dest="site_sort"/>
     <copyField source="site" dest="site_search"/>
 
+    <field name="has_floor_plan" type="boolean" indexed="true" stored="true" omitNorms="true"/>
+    <field name="has_floor_plan_text" type="string" indexed="true" stored="true" omitNorms="true"/>
+
     <field name="date_created" type="pdate" indexed="true" stored="true" omitNorms="true"/>
     <field name="last_update" type="pdate" indexed="true" stored="true" omitNorms="true"/>
 
