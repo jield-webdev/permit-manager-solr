@@ -442,6 +442,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="building"
@@ -449,13 +450,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
-    />
-    <field
-            name="building_sort"
-            type="text_gen_sort"
-            indexed="true"
-            stored="true"
-            omitNorms="true"
+            multiValued="true"
     />
     <field
             name="building_search"
@@ -463,9 +458,9 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
 
-    <copyField source="building" dest="building_sort"/>
     <copyField source="building" dest="building_search"/>
 
     <field
@@ -474,6 +469,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="site"
@@ -481,6 +477,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="site_sort"
@@ -488,6 +485,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="site_search"
@@ -495,9 +493,9 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
 
-    <copyField source="site" dest="site_sort"/>
     <copyField source="site" dest="site_search"/>
 
     <field
@@ -506,6 +504,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="floor"
@@ -513,6 +512,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="floor_sort"
@@ -520,6 +520,7 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
     <field
             name="floor_search"
@@ -527,9 +528,9 @@
             indexed="true"
             stored="true"
             omitNorms="true"
+            multiValued="true"
     />
 
-    <copyField source="floor" dest="floor_sort"/>
     <copyField source="floor" dest="floor_search"/>
 
     <field
@@ -715,7 +716,13 @@
             stored="true"
             omitNorms="true"
     />
-
+    <field
+            name="have_risky_tasks_been_validated_by_all_responsibles"
+            type="boolean"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
     <field
             name="has_contractor_registration"
             type="boolean"
@@ -730,7 +737,6 @@
             stored="true"
             omitNorms="true"
     />
-
     <field
             name="is_new_permit_system"
             type="boolean"
