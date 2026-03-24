@@ -3,6 +3,7 @@ LABEL maintainer="info@jield.nl"
 LABEL org.opencontainers.image.source="https://github.com/jield-webdev/permit-manager-solr/solr"
 
 ENV SOLR_OPTS="-XX:-UseLargePages"
+CMD ["solr", "start", "-f", "--user-managed"]
 
 ADD --chown=solr:solr solr/asset /var/solr/data/asset
 ADD --chown=solr:solr solr/building /var/solr/data/building

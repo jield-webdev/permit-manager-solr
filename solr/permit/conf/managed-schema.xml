@@ -665,6 +665,13 @@
             stored="true"
             omitNorms="true"
     />
+    <field
+            name="date_cancelled"
+            type="pdate"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
 
     <field
             name="is_closed"
@@ -675,6 +682,20 @@
     />
     <field
             name="is_closed_text"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="is_cancelled"
+            type="boolean"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="is_cancelled_text"
             type="string"
             indexed="true"
             stored="true"
@@ -790,6 +811,63 @@
     <field
             name="has_permit_template_changed"
             type="boolean"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+
+    <field
+            name="has_shutdown"
+            type="boolean"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_id"
+            type="pint"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_order_id"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_order_number"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_revision_id"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_revision_description"
+            type="string"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_date_created"
+            type="pdate"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
+    <field
+            name="shutdown_last_update"
+            type="pdate"
             indexed="true"
             stored="true"
             omitNorms="true"
