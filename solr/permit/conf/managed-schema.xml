@@ -772,7 +772,13 @@
             stored="true"
             omitNorms="true"
     />
-
+    <field
+            name="has_overlap_with_other_permits"
+            type="boolean"
+            indexed="true"
+            stored="true"
+            omitNorms="true"
+    />
     <field
             name="has_permit_template"
             type="boolean"
